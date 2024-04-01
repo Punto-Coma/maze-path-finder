@@ -1,0 +1,177 @@
+---
+import Maze from "../component/maze";
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<title>Astro</title>
+	</head>
+	<body class="bg-slate-900 w-screen h-screen flex flex-col justify-center items-center text-slate-50">
+		<div class="relative" id="home">
+            <div aria-hidden="true" class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20">
+                <div class="blur-[106px] h-56 bg-gradient-to-br from-primary to-purple-400 dark:from-blue-700"></div>
+                <div class="blur-[106px] h-32 bg-gradient-to-r from-cyan-400 to-sky-300 dark:to-indigo-600"></div>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6 z-10">
+                <div class='mt-1 flex flex-col items-center'>
+                    <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl flex items-center justify-center ">
+                        aMaze
+                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-purple-400 ">ing</span>
+                    </h1>
+                    <h4>find your lucky path</h4>
+                </div>
+				<Maze client:load />
+			</div>
+		</div>
+		<div class="flex flex-row justify-center mt-14 w-full gap-2">
+			<a target="_blank" href="https://twitter.com/mativivorita" class="btn btn-ghost btn-square hover:animate-pulse">
+				<i class="fa-brands fa-twitter"></i>
+			</a>
+			<a target="_blank" href="https://github.com/Punto-Coma" class="btn btn-ghost btn-square">
+				<i class="fa-brands fa-github"></i>
+			</a>
+			<a target="_blank" href="https://www.linkedin.com/in/matiasgumma" class="btn btn-ghost btn-square">
+				<i class="fa-brands fa-linkedin"></i>
+			</a>
+			<a target="_blank" href="https://discord.gg/k26PzESD" class="btn btn-ghost btn-square">
+				<i class="fa-brands fa-discord"></i>
+			</a>
+		</div>
+
+		<small>Reference: <a target="_blank" href="//x.com/Rainmaker1973/status/1773699616568938739?s=20" class="btn btn-link">https://x.com/Rainmaker1973/status/1773699616568938739?s=20</a></small>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+	  --accent: 136, 58, 234;
+	  --accent-light: 224, 204, 250;
+	  --accent-dark: 49, 10, 101;
+	  --accent-gradient: linear-gradient(
+		45deg,
+		rgb(var(--accent)),
+		rgb(var(--accent-light)) 30%,
+		white 60%
+	  );
+	}
+	html {
+	  font-family: system-ui, sans-serif;
+	  scroll-behavior: smooth;
+	  background-size: 224px;
+	}
+	body {
+	  margin: 0;
+	}
+	.astro-a {
+		position: absolute;
+		top: -120px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: 0;
+	}
+  
+	.acss-1mqyh2o {
+	  background-image: linear-gradient(
+		  -45deg,
+		  #ffcb47,
+		  #e34ba9,
+		  #369eff,
+		  #95f3d9
+		);
+	  -webkit-background-size: 400% 400%;
+	  background-size: 400% 400%;
+	  border-radius: inherit;
+	  -webkit-animation: 5s animation-1gj30q7 5s ease infinite;
+	  animation: 5s animation-1gj30q7 5s ease infinite;
+	  position: absolute;
+	  z-index: -2;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  opacity: 0.5;
+	  -webkit-filter: blur(1.5em);
+	  filter: blur(1.5em);
+	  border-radius: inherit;
+  }
+	.acss-1wtrwk2 {
+		position: relative;
+		z-index: 1;
+		background-image: linear-gradient(
+			-45deg,
+			#ffcb47,
+			#e34ba9,
+			#369eff,
+			#95f3d9
+		  );
+		-webkit-background-size: 400% 400%;
+		background-size: 400% 400%;
+		border-radius: inherit;
+		-webkit-animation: 5s animation-1gj30q7 5s ease infinite;
+		animation: 5s animation-1gj30q7 5s ease infinite;
+		border: none;
+		border-radius: 9999px!important;
+	}
+	.acss-1wtrwk2::before {
+	  content: '';
+	  position: absolute;
+	  z-index: -1;
+	  top: 1px;
+	  left: 1px;
+	  width: calc(100% - 2px);
+	  height: calc(100% - 2px);
+	  background: #000000;
+	  border-radius: 9999px;
+  }
+	.acss-15nzl65 {
+	  background-image: linear-gradient(
+		  -45deg,
+		  #ffcb47,
+		  #e34ba9,
+		  #369eff,
+		  #95f3d9
+		);
+	  -webkit-background-size: 400% 400%;
+	  background-size: 400% 400%;
+	  border-radius: inherit;
+	  -webkit-animation: 5s animation-1gj30q7 5s ease infinite;
+	  animation: 5s animation-1gj30q7 5s ease infinite;
+	  pointer-events: none;
+	  position: absolute;
+	  z-index: 10;
+	  top: -250px;
+	  left: 50%;
+	  -webkit-transform: translateX(-50%) scale(1.5);
+	  -moz-transform: translateX(-50%) scale(1.5);
+	  -ms-transform: translateX(-50%) scale(1.5);
+	  transform: translateX(-50%) scale(1.5);
+	  width: 600px;
+	  height: 600px;
+	  opacity: 0.2;
+	  -webkit-filter: blur(100px);
+	  filter: blur(100px);
+  }
+  
+	@keyframes animation-1gj30q7 {
+	  0% {
+	  -webkit-background-position: 0% 50%;
+	  background-position: 0% 50%;
+	  }
+	  50% {
+	  -webkit-background-position: 100% 50%;
+	  background-position: 100% 50%;
+	  }
+	  100% {
+	  -webkit-background-position: 0% 50%;
+	  background-position: 0% 50%;
+	  }
+	}
+  </style>

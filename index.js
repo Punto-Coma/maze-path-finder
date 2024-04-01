@@ -91,13 +91,13 @@ function generateSecurePathHash(path) {
 
 async function findPath(maze, currentPos, endPoints, path = [], lastDoorColor = 1) {
     // print un console lastDoorColor real color (1 blue door, 2 red door, 3 free path, 0 wall)
-    const colorMap = {
-        1: 'blue',
-        2: 'red',
-        3: 'green',
-        0: 'black'
-    };
-    console.log(`Last door color: ${colorMap[lastDoorColor]}`);
+    // const colorMap = {
+    //     1: 'blue',
+    //     2: 'red',
+    //     3: 'green',
+    //     0: 'black'
+    // };
+    // console.log(`Last door color: ${colorMap[lastDoorColor]}`);
 
     drawMaze(maze, path.concat([currentPos]));
     await new Promise(resolve => setTimeout(resolve, 50)); // Delay for visualization
